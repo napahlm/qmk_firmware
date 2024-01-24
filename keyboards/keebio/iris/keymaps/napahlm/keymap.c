@@ -24,7 +24,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
      KC_LSFT, NO_A,    NO_S,    NO_D,    NO_F,    NO_G,                               NO_H,    NO_J,    NO_K,    NO_L,    NO_SCLN, KC_RSFT,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-     KC_LCTL, NO_Z,    NO_X,    NO_C,    NO_V,    NO_B,    KC_LALT,          NO_BSLS, NO_N,    NO_M,    NO_COMM, NO_DOT,  NO_SLSH, NO_QUOT,
+     KC_LCTL, NO_Z,    NO_X,    NO_C,    NO_V,    NO_B,    KC_LALT,          KC_CAPS, NO_N,    NO_M,    NO_COMM, NO_DOT,  NO_SLSH, NO_QUOT,
   //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
                                     KC_LGUI, LOWER,   KC_SPC,                    KC_ENT,  RAISE,   KC_RALT
                                 // └────────┴────────┴────────┘                 └────────┴────────┴────────┘
@@ -32,15 +32,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_LOWER] = LAYOUT(
   //┌────────┬────────┬────────┬────────┬────────┬────────┐                          ┌────────┬────────┬────────┬────────┬────────┬────────┐
-     NO_TILD, NO_EXLM, NO_AT,   NO_HASH, NO_DLR,  NO_PERC,                            NO_CIRC, NO_AMPR, NO_ASTR, NO_PIPE, NO_QUES, KC_BSPC,
+     NO_PIPE, NO_EXLM, NO_DQUO, NO_HASH, NO_CURR, NO_PERC,                            NO_AMPR, NO_SLSH, NO_LPRN, NO_RPRN, NO_EQL,  KC_BSPC,
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
-     KC_DEL,  NO_LCBR, NO_RCBR, NO_LPRN, NO_RPRN, _______,                            _______, _______, _______, _______, NO_ARNG, _______,
+     KC_TAB,  NO_LCBR, NO_RCBR, NO_MINS, NO_PLUS, NO_ASTR,                            _______, KC_PGUP, KC_HOME, NO_BSLS, NO_ARNG, KC_DEL,
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
-     KC_LSFT, _______, KC_LEFT, KC_RGHT, KC_UP,   _______,                            _______, _______, _______, NO_OSTR, NO_AE,   KC_RSFT,
+     KC_LSFT, NO_LPRN, NO_RPRN, NO_UNDS, KC_UP,   NO_EQL,                             _______, KC_PGDN, KC_END,  NO_OSTR, NO_AE,   KC_RSFT,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-     _______, NO_LBRC, NO_RBRC, _______, KC_DOWN, _______, _______,          _______, _______, _______, _______, _______, NO_QUES, _______,
+     KC_LCTL, NO_LBRC, NO_RBRC, KC_LEFT, KC_DOWN, KC_RGHT, KC_LALT,          KC_CAPS, NO_AT,   _______, _______, NO_TILD, NO_QUES, NO_SECT,
   //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
-                                    _______, _______, _______,                   KC_DEL,  _______, _______
+                                    KC_LGUI, LOWER,   KC_SPC,                    KC_ENT,  RAISE,   KC_RALT
                                 // └────────┴────────┴────────┘                 └────────┴────────┴────────┘
   ),
 
@@ -48,13 +48,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //┌────────┬────────┬────────┬────────┬────────┬────────┐                          ┌────────┬────────┬────────┬────────┬────────┬────────┐
      KC_F12,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,                              KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
-     RGB_TOG, _______, _______, _______, _______, _______,                            NO_EXLM, NO_PLUS, NO_EQL,  NO_BSLS, _______, _______,
+     KC_TAB,  RGB_TOG, KC_MPRV, KC_MNXT, KC_VOLU, _______,                            NO_ACUT, NO_EXLM, NO_EQL,  NO_GRV,  NO_CIRC, KC_DEL,
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
-     RGB_MOD, KC_MPRV, KC_MNXT, KC_VOLU, KC_PGUP, _______,                            NO_HASH, NO_MINS, NO_UNDS, NO_DQUO, _______, _______,
+     KC_LSFT, RGB_MOD, KC_MSTP, KC_MPLY, KC_VOLD, _______,                            NO_GRV,  NO_PND,  NO_DLR,  NO_EURO, NO_MICR, KC_RSFT,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-     KC_MUTE, KC_MSTP, KC_MPLY, KC_VOLD, KC_PGDN, _______, KC_LALT,          _______, NO_PERC, NO_AMPR, NO_LABK, NO_RABK, _______, _______,
+     KC_LCTL, _______, _______, KC_MUTE, _______, _______, KC_LALT,          KC_CAPS, NO_PERC, NO_AMPR, NO_LABK, NO_RABK, NO_DIAE, _______,
   //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
-                                    KC_CAPS, _______, KC_LCTL,                   _______, _______, _______
+                                    KC_LGUI, LOWER,   KC_SPC,                    KC_ENT,  RAISE,   KC_RALT
                                 // └────────┴────────┴────────┘                 └────────┴────────┴────────┘
   ),
 
